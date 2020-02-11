@@ -1,0 +1,29 @@
+spring:
+  server:
+    context-path: /
+    port: 80
+  #  mvc:
+  #    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/static/
+  freemarker:
+    suffix: .ftl
+    prefix: /
+
+
+
+  datasource:
+    name: db
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ajax_login
+      username: root
+      password: 123456
+  mybatis:
+    mapper-locations: classpath*:per/sjz/demo_ajax/dao/*.xml
+    type-aliases-package: per.sjz.demo_ajax.pojo
+
+
+
+

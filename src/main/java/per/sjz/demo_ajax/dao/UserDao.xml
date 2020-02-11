@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="per.sjz.demo_ajax.dao.UserDao">
+
+    <select id="findUserName" resultType="per.sjz.demo_ajax.pojo.User">
+        SELECT * FROM `user` where loginname=#{loginname}
+    </select>
+
+    <select id="findNum" resultType="per.sjz.demo_ajax.pojo.User">
+        select loginname from `user` where loginname= #{loginname}
+  </select>
+</mapper>
